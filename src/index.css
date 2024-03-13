@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'bahnschrift';
+    src: url('/src/assets/bahnschrift.ttf') format('truetype');
+  }
+  body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: 'bahnschrift', sans-serif;
+    height: 100svh;
+    font-stretch: condensed;
+    color: white;
+  }
+  #app {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+  }
+  main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section {
+    padding: 3.125rem;
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1.25rem;
+  }
+  .design-text .letter,
+  .web-text .letter,
+  .video-text .letter,
+  .photo-text .letter,
+  .paul .letter,
+  .marchiset .letter {
+    display: inline-block;
+  }
+  .design-text,
+  .web-text,
+  .photo-text,
+  .video-text,
+  .paul,
+  .marchiset {
+    line-height: 85.214%;
+    margin: 0;
+    font-weight: 500;
+    overflow: hidden;
+  }
+  .project-container {
+    background-color: #fafafa;
+    padding: 3.125rem 1.5625rem 0 1.5625rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 25vh);
+    gap: 1.25rem;
+    color: black;
+  }
+  .project-container-next {
+    background-color: #fafafa;
+    padding: 0 1.5625rem 3.125rem 1.5625rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 25vh);
+    gap: 1.25rem;
+    color: black;
+  }
+  .project-container-video {
+    background-color: #fafafa;
+    padding: 3.125rem 1.5625rem 3.125rem 1.5625rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(17, 25vh);
+    gap: 1.25rem;
+    color: black;
+  }
+  .download {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(45px);
+  }
+  .about {
+    background-image: url('/public/img/tiles-blur-about.png');
+    background-color: #2265C0;
+  }
+  .about-img {
+    background-image: url('/public/img/photo-paul-perce.png');
+  }
+  @media screen and (min-width: 850px) {
+    .container {
+      max-width: unset !important;
+    }
+    .project-container {
+      background-color: #fafafa;
+      padding: 3.125rem 3.125rem 0 3.125rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(17, 20vh);
+      gap: 1.25rem;
+      color: black;
+    }
+    .project-container-next {
+      background-color: #fafafa;
+      padding: 0 3.125rem 3.125rem 3.125rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(15, 20vh);
+      gap: 1.25rem;
+      color: black;
+    }
+    .project-container-video {
+      background-color: #fafafa;
+      padding: 3.125rem 3.125rem 3.125rem 3.125rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(23, 25vh);
+      gap: 1.25rem;
+      color: black;
+    }
+  }
+}
+
+@layer utilities {
+  .grid-area {
+    grid-area: 1/1;
+  }
+  .font-regular {
+    font-stretch: normal;
+  }
+  .font-condensed {
+    font-stretch: condensed;
+  }
+  .z-2 {
+    z-index: 2;
+  }
+  .row-start-8 {
+    grid-row-start: 8;
+  }
+  .row-start-9 {
+    grid-row-start: 9;
+  }
+  .row-start-10 {
+    grid-row-start: 10;
+  }
+  .row-start-11 {
+    grid-row-start: 11;
+  }
+  .row-start-12 {
+    grid-row-start: 12;
+  }
+  .row-start-13 {
+    grid-row-start: 13;
+  }
+  .row-start-14 {
+    grid-row-start: 14;
+  }
+  .row-start-15 {
+    grid-row-start: 15;
+  }
+  .row-start-16 {
+    grid-row-start: 16;
+  }
+  .row-start-17 {
+    grid-row-start: 17;
+  }
+  .row-start-18 {
+    grid-row-start: 18;
+  }
+  .row-start-19 {
+    grid-row-start: 19;
+  }
+  .row-start-20 {
+    grid-row-start: 20;
+  }
+  .row-start-21 {
+    grid-row-start: 21;
+  }
+  .row-start-22 {
+    grid-row-start: 22;
+  }
+  .row-start-23 {
+    grid-row-start: 23;
+  }
+  .row-start-24 {
+    grid-row-start: 24;
+  }
+  .row-start-25 {
+    grid-row-start: 25;
+  }
+  .row-start-26 {
+    grid-row-start: 26;
+  }
+  .row-end-8 {
+    grid-row-end: 8;
+  }
+  .row-end-9 {
+    grid-row-end: 9;
+  }
+  .row-end-10 {
+    grid-row-end: 10;
+  }
+  .row-end-11 {
+    grid-row-end: 11;
+  }
+  .row-end-12 {
+    grid-row-end: 12;
+  }
+  .row-end-13 {
+    grid-row-end: 13;
+  }
+  .row-end-14 {
+    grid-row-end: 14;
+  }
+  .row-end-15 {
+    grid-row-end: 15;
+  }
+  .row-end-16 {
+    grid-row-end: 16;
+  }
+  .row-end-17 {
+    grid-row-end: 17;
+  }
+  .row-end-18 {
+    grid-row-end: 18;
+  }
+  .row-end-19 {
+    grid-row-end: 19;
+  }
+  .row-end-20 {
+    grid-row-end: 20;
+  }
+  .row-end-21 {
+    grid-row-end: 21;
+  }
+  .row-end-22 {
+    grid-row-end: 22;
+  }
+  .row-end-23 {
+    grid-row-end: 23;
+  }
+  .row-end-24 {
+    grid-row-end: 24;
+  }
+  .row-end-25 {
+    grid-row-end: 25;
+  }
+  .row-end-26 {
+    grid-row-end: 26;
+  }
+  .snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  .leading-caps {
+    line-height: 80%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

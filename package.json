@@ -1,0 +1,49 @@
+{
+  "name": "paul-marchiset",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "typegen": "pocketbase-typegen --db ./pocketbase/pb_data/data.db --out ./src/pocketbase-types.ts"
+  },
+  "dependencies": {
+    "@types/animejs": "^3.1.12",
+    "@types/gsap": "^3.0.0",
+    "@unhead/vue": "^1.1.27",
+    "@vueuse/core": "^10.1.2",
+    "animejs": "^3.2.2",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "pocketbase": "^0.15.0",
+    "v3-scroll-lock": "^1.3.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.1"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.0",
+    "@types/node": "^20.2.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/tsconfig": "^0.1.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.41.0",
+    "eslint-plugin-vue": "^9.13.0",
+    "npm-run-all": "^4.1.5",
+    "pocketbase-typegen": "^1.1.9",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "~4.8.4",
+    "vite": "^4.3.8",
+    "vite-plugin-pages": "^0.30.1",
+    "vue-tsc": "^1.7.8"
+  }
+}
