@@ -1,33 +1,37 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useHead } from '@unhead/vue';
-import DownloadIcon from '@/components/icons/DownloadIcon.vue';
-
+import { useHead } from '@unhead/vue'
+import { allDesign, allVideo, allWeb } from '@/backend';
+import { onMounted } from 'vue';
 useHead({
-    title: 'About - Paul Marchiset'
-});
+  title: `About - Paul Marchiset`
+})
+
+const photo = '/img/paul-about.jpg'
+const photo2 = '/img/photo-paul-perce.png'
+
+
 
 </script>
 
 <template>
-    <section class="container about">
-        <div class="hidden lg:block about-img row-start-1 col-start-1 col-end-6 row-end-10 m-img-about"></div>
-        <div class="flex flex-col gap-2 col-start-1 lg:col-start-6 col-end-9 row-start-2 lg:row-start-3 row-end-8">
-            <h1 class="leading-caps uppercase text-xl lg:text-xxl font-semibold z-2">
-                Paul Marchiset</h1>
-            <h2 class="hidden lg:block leading-caps uppercase font-regular font-light text-xs ">STUDENT IN GRAPHIC DESIGN</h2>
-            <div class="flex flex-col gap-2 font-body font-light lg:text-xxs ">
-                <p >Currently immersing myself in the study of multimedia and internet professions in Montbéliard, I take
-                    pride in my role within team projects. I find joy in shouldering responsibilities and guiding operations
-                    effectively.
-                </p>
-                <p>During my time at Vanier College in Montreal, I had the privilege of deepening my passion for typography,
-                    focusing intensely on the intricacies of character design and understanding.
-                </p>
-                <p>My fascination with audiovisual content has led me to engage in various professional and academic
-                    projects, including live broadcasts, documentaries, short films, and press conferences. This
-                    multifaceted involvement reflects my eagerness to explore different aspects of the field.</p>
-            </div>
-        </div>
-    </section>
+  <div class="project-container">
+    <div class="flex flex-col uppercase col-start-1 col-end-4 lg:col-end-3 row-start-2 row-end-5">
+      <h1 class=" leading-caps text-big-mobile lg:text-big-desktop font-semibold z-2">
+        Paul Marchiset</h1>
+      <h4 class="font-regular leading-caps lg:text-m">Student in graphic design</h4>
+    </div>
+    <div v-bind:style='{ backgroundImage: "url(" + photo + ")" }'
+      class="bg-cover bg-top lg:bg-top-4 col-start-2 row-start-4 lg:col-start-3 col-end-5 lg:row-start-3 lg:row-end-6"></div>
+    <h2 class="font-body leading-[100%] col-start-1 col-end-5 row-start-6 text-s lg:row-start-7 lg:row-end-9 lg:text-xxl">Hi, I'm Paul, a graphic design student. I'm passionate about typography, photography and video.
+      </h2>
+    <div v-bind:style='{ backgroundImage: "url(" + photo2 + ")" }'
+      class="bg-center bg-cover bg-no-repeat col-start-1 col-end-5 row-start-7 row-end-10 lg:row-start-10 lg:row-end-14"></div>
+    <div
+      class="col-start-1 col-end-5 row-start-11 lg:col-start-2 lg:col-end-4 lg:row-start-15 lg:row-end-17 flex flex-col">
+      <h3 class="uppercase text-m lg:text-xl font-medium">about</h3>
+      <p class="font-body">Hi! I'm Paul Marchiset, student in 2nd-year of MMI Montbéliard based in France. Passionnated by video, photography and typography, I find inspiration in the everyday things and in everything that I can see.
+        During team projects, i stand out for taking on responsibilities and steer operations effectively</p>
+    </div>
+  </div>
+
 </template>

@@ -17,6 +17,9 @@
     font-stretch: condensed;
     color: white;
   }
+  body::-webkit-scrollbar {
+    display: none;
+  }
   #app {
     position: absolute;
     top: 0;
@@ -133,7 +136,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(23, 25vh);
+      grid-template-rows: repeat(22, 25vh);
       gap: 1.25rem;
       color: black;
     }

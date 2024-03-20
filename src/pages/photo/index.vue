@@ -8,14 +8,12 @@ useHead({
 })
 import { allPhotos } from '@/backend'
 
-interface photo {
-  id: string;
-}
 
-const photoList = ref([]);
+const photoList = await allPhotos();
 
 onMounted(async () => {
   const photos = await allPhotos();
+  //@ts-ignore
   photoList.value = shuffleArray(photos);
 });
 

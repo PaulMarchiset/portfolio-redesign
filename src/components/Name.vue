@@ -4,6 +4,7 @@ import anime from 'animejs';
 
 onMounted(() => {
     var textWrapper = document.querySelector(".paul");
+    //@ts-ignore
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
@@ -18,6 +19,7 @@ anime.timeline({ loop: false }).add({
 });
 
 var textWrapper = document.querySelector(".marchiset");
+//@ts-ignore
 textWrapper.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"

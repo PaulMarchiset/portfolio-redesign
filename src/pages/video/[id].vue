@@ -45,7 +45,7 @@ const videoSoftware = videoInfo.softwares.length === 0 ? false : true
       <p class="font-body" style="white-space: pre-wrap;">{{ videoInfo.about }}</p>
     </div>
   <div v-bind:style='{ backgroundImage: "url(" + imgMain + ")" }'
-    class=" bg-cover bg-center col-start-1 col-end-5 lg:col-end-3 row-start-13 row-end-15 lg:row-start-18 lg:row-end-23">
+    class=" bg-cover bg-center col-start-1 col-end-5 lg:col-end-3 row-start-13 row-end-15 lg:row-start-18 lg:row-end-22">
   </div>
   <div class="col-start-1 row-start-16 lg:col-start-3 col-end-5 lg:row-start-19 lg:row-end-22">
     <h3 class="uppercase text-m lg:text-xl font-medium">Credits</h3>

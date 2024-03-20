@@ -11,6 +11,10 @@ module.exports = {
       'nav': ['Bahnschrift', 'sans-serif'],
       'body': ['Outfit', 'sans-serif'],
     },
+    backgroundPosition: {
+      'center': 'center',
+      'top-4': 'center top -4rem',
+    },
     extend: {
       fontSize: {
         'big-mobile': '20vw',

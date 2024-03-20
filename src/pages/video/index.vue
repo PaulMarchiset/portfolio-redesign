@@ -19,7 +19,7 @@ onMounted(() => {
   const sections = document.querySelectorAll("main div section");
 
   let currentSection = 0;
-
+//@ts-ignore
   arrowRight.addEventListener("click", () => {
     if (currentSection < sections.length - 1) {
       currentSection++;
@@ -30,7 +30,7 @@ onMounted(() => {
       });
     }
   });
-
+//@ts-ignore
   arrowLeft.addEventListener("click", () => {
     if (currentSection > 0) {
       currentSection--;

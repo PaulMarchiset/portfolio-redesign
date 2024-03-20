@@ -1,6 +1,6 @@
 <!-- <script setup lang="ts">
 import { pb } from '@/backend'
-import { CollectionID } from '@/backend';
+import { DesignID,  } from '@/backend';
 import type { collectionResponse } from '@/pocketbase-types';
 
 

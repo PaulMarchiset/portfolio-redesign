@@ -18,22 +18,31 @@ onMounted(() => {
 
   links.forEach(link => {
     link.addEventListener('mouseover', function () {
+      //@ts-ignore
       let image = this.getAttribute('id') + '.jpg';
+      //@ts-ignore
       heroContainer.style.backgroundImage = `url('/public/img/menu/${image}')`;
+      //@ts-ignore
       heroContainer.style.animation = 'fadeIn 0.5s forwards';
+      //@ts-ignore
       this.style.color = 'white';
       links.forEach(otherLink => {
         if (otherLink !== link) {
+          //@ts-ignore
           otherLink.style.color = 'rgba(255, 255, 255, 0.5)';
         } else {
+          //@ts-ignore
           otherLink.style.color = 'white';
         }
       });
     });
 
     link.addEventListener('mouseout', function () {
+      //@ts-ignore
       heroContainer.style.backgroundImage = '';
+      //@ts-ignore
       this.style.color = 'rgba(255, 255, 255, 0.5)';
+      //@ts-ignore
       heroContainer.style.animation = 'fadeOut 0.5s forwards';
     });
   });

@@ -57,12 +57,13 @@ onMounted(() => {
   <div v-bind:style='{ backgroundImage: "url(" + img0 + ")" }'
     class="image-card col-start-1 col-end-9 row-start-2 row-end-7 bg-cover bg-center lg:col-start-2 lg:col-end-6 lg:row-start-3 lg:row-end-8 rounded-3xl z-2">
   </div>
-  <div v-bind:style='{ background: "#" + videoInfo.colormatte1 }'
+  
+  <!-- <div v-bind:style='{ background: "#" + videoInfo.colormatte1 }'
     class="color-matte1 col-start-1 col-end-9 row-start-2 row-end-7 bg-cover bg-center lg:col-start-2 lg:col-end-6 lg:row-start-3 lg:row-end-8 rounded-3xl">
   </div>
   <div v-bind:style='{ background: "#" + videoInfo.colormatte2 }'
     class="color-matte2 col-start-1 col-end-9 row-start-2 row-end-7 bg-cover bg-center lg:col-start-2 lg:col-end-6 lg:row-start-3 lg:row-end-8 rounded-3xl">
-  </div>
+  </div> -->
   <div
     class="col-start-1 col-end-9 row-start-7 row-end-9 flex flex-col justify-start items-end text-right lg:col-start-6 lg:col-end-8 lg:row-start-3 lg:row-end-5">
     <h2 class="leading-[85.2%] text-l lg:text-project-title font-condensed font-semibold uppercase">{{ videoInfo.name }}</h2>

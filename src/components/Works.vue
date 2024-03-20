@@ -4,6 +4,7 @@ import anime from 'animejs';
 
 onMounted(() => {
   const designWrapper = document.querySelector(".design-text");
+  //@ts-ignore
   designWrapper.innerHTML = designWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
@@ -17,6 +18,7 @@ onMounted(() => {
     duration: 1400,
   });
   const webWrapper = document.querySelector(".web-text");
+  //@ts-ignore
   webWrapper.innerHTML = webWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
@@ -30,6 +32,7 @@ onMounted(() => {
     duration: 1400,
   });
   const videoWrapper = document.querySelector(".video-text");
+  //@ts-ignore
   videoWrapper.innerHTML = videoWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
@@ -43,6 +46,7 @@ onMounted(() => {
     duration: 1400,
   });
   const photoWrapper = document.querySelector(".photo-text");
+  //@ts-ignore
   photoWrapper.innerHTML = photoWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
