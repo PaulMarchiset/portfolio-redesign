@@ -11,7 +11,7 @@ const props = defineProps<webResponse>()
 
 const webInfo = await WebID(props.id);
 
-// @ts-ignore
+
 const img = window.innerWidth > 850 ? webInfo.image_main : webInfo.image_secondary
 
 const img0 = img ? pb.getFileUrl(props, img, { thumb: '100x250' }) : '/image-not-found.png'

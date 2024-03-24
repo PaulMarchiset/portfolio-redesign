@@ -7,7 +7,7 @@ const props = defineProps<photoResponse>()
 
 const photoInfo = await PhotoID(props.id);
 
-// @ts-ignore
+
 const img0 = props.image
 const urlImg0 = img0 ? pb.getFileUrl(props, img0, { thumb: '100x250' }) : '/image-not-found.png'
 

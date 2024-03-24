@@ -73,3 +73,6 @@ onMounted(() => {
       </nav>
    </section>
 </template>
+
+
+sudo chmod -R 700 /var/www/portfolio

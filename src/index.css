@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
   @font-face {
     font-family: 'bahnschrift';
     src: url('/src/assets/bahnschrift.ttf') format('truetype');
@@ -73,6 +74,7 @@
     grid-template-rows: repeat(12, 25vh);
     gap: 1.25rem;
     color: black;
+    padding-bottom: 10rem;
   }
   .project-container-next {
     background-color: #fafafa;
@@ -155,6 +157,9 @@
   }
   .z-2 {
     z-index: 2;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .row-start-8 {
     grid-row-start: 8;

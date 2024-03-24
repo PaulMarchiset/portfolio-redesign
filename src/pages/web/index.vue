@@ -20,7 +20,7 @@ onMounted(() => {
 
   let currentSection = 0;
 
-  arrowRight.addEventListener("click", () => {
+  arrowRight!.addEventListener("click", () => {
     if (currentSection < sections.length - 1) {
       currentSection++;
       gsap.to("section", {
@@ -31,7 +31,7 @@ onMounted(() => {
     }
   });
 
-  arrowLeft.addEventListener("click", () => {
+  arrowLeft!.addEventListener("click", () => {
     if (currentSection > 0) {
       currentSection--;
       gsap.to("section", {

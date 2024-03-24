@@ -21,7 +21,7 @@ onMounted(() => {
       //@ts-ignore
       let image = this.getAttribute('id') + '.jpg';
       //@ts-ignore
-      heroContainer.style.backgroundImage = `url('/public/img/menu/${image}')`;
+      heroContainer.style.backgroundImage = `url('img/menu/${image}')`;
       //@ts-ignore
       heroContainer.style.animation = 'fadeIn 0.5s forwards';
       //@ts-ignore

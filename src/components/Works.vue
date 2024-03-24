@@ -46,8 +46,7 @@ onMounted(() => {
     duration: 1400,
   });
   const photoWrapper = document.querySelector(".photo-text");
-  //@ts-ignore
-  photoWrapper.innerHTML = photoWrapper.textContent.replace(
+  photoWrapper!.innerHTML = photoWrapper!.textContent!.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
   );

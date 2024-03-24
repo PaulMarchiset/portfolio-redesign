@@ -19,8 +19,7 @@ onMounted(() => {
   const sections = document.querySelectorAll("main div section");
 
   let currentSection = 0;
-//@ts-ignore
-  arrowRight.addEventListener("click", () => {
+  arrowRight!.addEventListener("click", () => {
     if (currentSection < sections.length - 1) {
       currentSection++;
       gsap.to("section", {
@@ -30,8 +29,7 @@ onMounted(() => {
       });
     }
   });
-//@ts-ignore
-  arrowLeft.addEventListener("click", () => {
+  arrowLeft!.addEventListener("click", () => {
     if (currentSection > 0) {
       currentSection--;
       gsap.to("section", {

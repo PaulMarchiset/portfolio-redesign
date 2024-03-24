@@ -9,7 +9,7 @@ const props = defineProps<designResponse>()
 
 const designInfo = await DesignID(props.id);
 
-// @ts-ignore
+
 const img0 = props.cover_image
 const urlImg0 = img0 ? pb.getFileUrl(props, img0, { thumb: '100x250' }) : '/image-not-found.png'
 

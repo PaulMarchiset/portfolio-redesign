@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 import type { designResponse, webResponse, videoResponse, photoResponse, collectionResponse } from'@/pocketbase-types'
-export const pb = new PocketBase("http://localhost:8090/");
+export const pb = new PocketBase("https://paulmarchiset.me/");
 
 
 // Fonction qui retourne la liste de tous les artistes
@@ -48,9 +48,14 @@ export async function VideoID(id:string) {
 }
 
 export async function allPhotos() {
-  const records = await pb.collection('photo').getFullList<photoResponse>();
-      return records;
+  const records = await pb.collection('photo').getFullList<photoResponse>({});
+  for (let i = records.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [records[i], records[j]] = [records[j], records[i]];
+  }
+  return records;
 }
+
 
 export async function PhotoID(id:string) {
   const records = await pb.collection('photo').getOne<photoResponse>(id);

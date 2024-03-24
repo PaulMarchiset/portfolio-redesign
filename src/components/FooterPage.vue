@@ -4,14 +4,17 @@ import { onMounted } from 'vue';
 onMounted(() => {
     let elements = document.querySelectorAll('.nav-link');
     elements.forEach((element) => {
-        //@ts-ignore
-        let innerText = element.innerText;
+       
+        let innerText: string | undefined;
+        if (element instanceof HTMLElement) {
+            innerText = element.innerText;
+        }
         element.innerHTML = '';
 
         let textContainer = document.createElement('div');
         textContainer.classList.add('block');
 
-        for (let lettre of innerText) {
+        for (let lettre of innerText!) {
             let span = document.createElement('span');
             span.innerText = lettre.trim() === '' ? '\xa0' : lettre;
             span.classList.add('lettre');

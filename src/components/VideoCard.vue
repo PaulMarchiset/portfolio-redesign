@@ -11,7 +11,7 @@ const props = defineProps<videoResponse>()
 
 const videoInfo = await VideoID(props.id);
 
-// @ts-ignore
+
 const img = videoInfo.photo
 
 const img0 = img ? pb.getFileUrl(props, img, { thumb: '100x250' }) : '/image-not-found.png'

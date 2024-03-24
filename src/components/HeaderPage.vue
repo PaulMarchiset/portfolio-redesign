@@ -16,8 +16,8 @@ onMounted(() => {
   const logoM2 = document.querySelector("#M2");
   const logoM3 = document.querySelector("#M3");
   
-//@ts-ignore
-  iconLogo.addEventListener("mouseover", () => {
+
+  iconLogo?.addEventListener("mouseover", () => {
    anime({
     targets: [logoP1, logoP2, logoM1, logoM2, logoM3],
     translateY: [0,100],

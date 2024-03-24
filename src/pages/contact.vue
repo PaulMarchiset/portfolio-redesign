@@ -20,8 +20,7 @@ const contactMail = () => {
   const copyMail = document.getElementById('mail');
   const tempInput = document.createElement('input');
   document.body.appendChild(tempInput);
-  //@ts-ignore
-  tempInput.value = copyMail.textContent || '';
+  tempInput.value = copyMail!.textContent || '';
   tempInput.select();
   tempInput.setSelectionRange(0, 99999); // For mobile devices
   document.execCommand('copy');
@@ -63,4 +62,29 @@ onMounted(() => {
 * {
   overflow: hidden;
 }
+
+h1 {
+  cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+
+h1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 1s cubic-bezier(0.4,0,0,1);
+  }
+  
+  h1:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 </style>
